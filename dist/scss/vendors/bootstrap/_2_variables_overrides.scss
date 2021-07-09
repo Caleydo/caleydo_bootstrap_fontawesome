@@ -1,0 +1,19 @@
+// 2. Include any default variable overrides here
+// @see https://getbootstrap.com/docs/5.0/customize/sass/#importing
+
+// $primary: blue;
+// $secondary: steelblue;
+
+// Override spacing (Bootstrap default: 1 rem)
+// @see https://getbootstrap.com/docs/5.0/utilities/spacing/
+$spacer: 1.25rem !default;
+
+// This will be merged in file _3_variables_mixins_utilities.scss with the bootstrap spacers
+$phovea-spacers: (
+  5: ($spacer * 2),
+  6: ($spacer * 3),
+  7: ($spacer * 4),
+  8: ($spacer * 5),
+  9: ($spacer * 6),
+  10: ($spacer * 7)
+) !default;

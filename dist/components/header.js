@@ -10,44 +10,46 @@ import { AppMetaDataUtils } from './metaData';
  */
 const getTemplate = () => {
     return (`<nav class="navbar phovea-navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#" data-header="appLink"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerNavBar" aria-controls="headerNavBar" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" data-header="appLink"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavBar" aria-controls="headerNavBar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="headerNavBar">
-      <ul class="navbar-nav mr-auto" data-header="mainMenu">
+    <div class="collapse navbar-collapse" id="headerNavBar">
+        <ul class="navbar-nav me-auto" data-header="mainMenu">
 
-      </ul>
-      <ul class="navbar-nav" data-header="rightMenu">
-          <li class="nav-item" hidden data-header="optionsLink">
-              <a href="#" class="nav-link" data-toggle="modal" data-target="#headerOptionsDialog" title="${I18nextManager.getInstance().i18n.t('phovea:ui.options')}">
-                  <i class="fas fa-cog fa-fw" aria-hidden="true"></i>
-                  <span class="sr-only">${I18nextManager.getInstance().i18n.t('phovea:ui.openOptionsDialog')}</span>
-              </a>
-          </li>
-          <li class="nav-item" hidden data-header="aboutLink">
-              <a href="#" class="nav-link" data-toggle="modal" data-target="#headerAboutDialog" title="${I18nextManager.getInstance().i18n.t('phovea:ui.about')}">
-                  <i class="fas fa-info fa-fw" aria-hidden="true"></i>
-                  <span class="sr-only">${I18nextManager.getInstance().i18n.t('phovea:ui.openAboutDialog')}</span>
-              </a>
-          </li>
-          <li class="nav-item" hidden data-header="bugLink">
-              <a href="#" class="nav-link" data-toggle="modal" data-target="#headerReportBugDialog" title="${I18nextManager.getInstance().i18n.t('phovea:ui.reportBug')}">
-                  <i class="fas fa-bug fa-fw" aria-hidden="true"></i>
-                  <span class="sr-only">${I18nextManager.getInstance().i18n.t('phovea:ui.reportBug')}</span>
-              </a>
-          </li>
-          <li class="nav-item" hidden data-header="helpLink">
-              <a href="//caleydo.org" target="_blank" class="nav-link" title="${I18nextManager.getInstance().i18n.t('phovea:ui.openHelpPage')}">
-                  <span class="fa-stack" style="font-size: 0.5em; height: 2.3em;">
-                    <i class="fas fa-book-open fa-stack-2x"></i>
-                    <i class="fas fa-info fa-stack-1x" style="left: 20%; filter:invert(100%);"></i>
-                  </span>
-                  <span class="sr-only">${I18nextManager.getInstance().i18n.t('phovea:ui.openHelpPage')}</span>
-              </a>
-          </li>
-      </ul>
+        </ul>
+        <ul class="navbar-nav" data-header="rightMenu">
+            <li class="nav-item" hidden data-header="optionsLink">
+                <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#headerOptionsDialog" title="${I18nextManager.getInstance().i18n.t('phovea:ui.options')}">
+                    <i class="fas fa-cog fa-fw" aria-hidden="true"></i>
+                    <span class="visually-hidden">${I18nextManager.getInstance().i18n.t('phovea:ui.openOptionsDialog')}</span>
+                </a>
+            </li>
+            <li class="nav-item" hidden data-header="aboutLink">
+                <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#headerAboutDialog" title="${I18nextManager.getInstance().i18n.t('phovea:ui.about')}">
+                    <i class="fas fa-info fa-fw" aria-hidden="true"></i>
+                    <span class="visually-hidden">${I18nextManager.getInstance().i18n.t('phovea:ui.openAboutDialog')}</span>
+                </a>
+            </li>
+            <li class="nav-item" hidden data-header="bugLink">
+                <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#headerReportBugDialog" title="${I18nextManager.getInstance().i18n.t('phovea:ui.reportBug')}">
+                    <i class="fas fa-bug fa-fw" aria-hidden="true"></i>
+                    <span class="visually-hidden">${I18nextManager.getInstance().i18n.t('phovea:ui.reportBug')}</span>
+                </a>
+            </li>
+            <li class="nav-item" hidden data-header="helpLink">
+                <a href="//caleydo.org" target="_blank" class="nav-link" title="${I18nextManager.getInstance().i18n.t('phovea:ui.openHelpPage')}">
+                    <span class="fa-stack" style="font-size: 0.5em; height: 2.3em;">
+                      <i class="fas fa-book-open fa-stack-2x"></i>
+                      <i class="fas fa-info fa-stack-1x" style="left: 20%; filter:invert(100%);"></i>
+                    </span>
+                    <span class="visually-hidden">${I18nextManager.getInstance().i18n.t('phovea:ui.openHelpPage')}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
   </div>
 </nav>
 
@@ -57,8 +59,7 @@ const getTemplate = () => {
       <div class="modal-content">
           <div class="modal-header">
               <h4 class="modal-title"> ${I18nextManager.getInstance().i18n.t('phovea:ui.about')}</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label=" ${I18nextManager.getInstance().i18n.t('phovea:ui.close')}">
-                  <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label=" ${I18nextManager.getInstance().i18n.t('phovea:ui.close')}">
               </button>
           </div>
           <div class="modal-body" data-header="about">
@@ -82,8 +83,7 @@ const getTemplate = () => {
       <div class="modal-content">
           <div class="modal-header">
               <h4 class="modal-title"> ${I18nextManager.getInstance().i18n.t('phovea:ui.reportBug')}</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label=" ${I18nextManager.getInstance().i18n.t('phovea:ui.close')}">
-                  <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label=" ${I18nextManager.getInstance().i18n.t('phovea:ui.close')}">
               </button>
           </div>
           <div class="modal-body" data-header="bug">
@@ -99,8 +99,7 @@ const getTemplate = () => {
       <div class="modal-content">
           <div class="modal-header">
               <h4 class="modal-title"> ${I18nextManager.getInstance().i18n.t('phovea:ui.options')}</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label=" ${I18nextManager.getInstance().i18n.t('phovea:ui.close')}">
-                  <span aria-hidden="true">&times;</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label=" ${I18nextManager.getInstance().i18n.t('phovea:ui.close')}">
               </button>
           </div>
           <div class="modal-body" data-header="options">
@@ -164,7 +163,7 @@ export class AppHeader {
             /**
              * color scheme: bright (= false) or dark (= true)
              */
-            inverse: false,
+            inverse: true,
             /**
              * position of the header: static (= false) or fixed at the top (= true)
              */
@@ -365,6 +364,7 @@ export class AppHeader {
         import('jquery').then((jquery) => {
             const $selector = $(selector);
             $selector.modal('show')
+                // @ts-ignore
                 .on('shown.bs.modal', function () {
                 $($selector).trigger('focus');
             });

@@ -1,0 +1,18 @@
+// 4. Modify the Boostrap SASS maps before importing the components
+// @see https://getbootstrap.com/docs/5.0/customize/sass/#maps-and-loops
+
+$phovea-theme-colors: (
+  "light": #F1F2F4,
+  "dark": #2F353A,
+  "white": #FFFFFF,
+  "white-hover": #FFFFFFBF, // add some alpha on hover
+  "gray-1": #6c757d,
+  "gray-2": #72818d,
+  "gray-3":  #d4d7dd,
+  "gray-4":  #aab3bb,
+  "gray-5":  #3b4349,
+  "gray-6":  #5c6873,
+  "gray-7":  #73818f,
+) !default;
+
+$theme-colors: map-merge($theme-colors, $phovea-theme-colors);

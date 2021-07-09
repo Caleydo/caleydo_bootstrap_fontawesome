@@ -56,7 +56,7 @@ export class Dialog {
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title">${title}</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="${I18nextManager.getInstance().i18n.t('phovea:ui.close')}"><span aria-hidden="true">×</span></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="${I18nextManager.getInstance().i18n.t('phovea:ui.close')}"></button>
           </div>
           <div class="modal-body">
 
@@ -127,7 +127,7 @@ export class Dialog {
   static msg(text: string, category = 'info'): Promise<void> {
     return new Promise<void>((resolve) => {
       const div = $(`<div class="alert alert-${category} alert-dismissible fade in" role="alert">
-          <button type="button" class="close" data-dismiss="modal" aria-label="${I18nextManager.getInstance().i18n.t('phovea:ui.close')}"><span aria-hidden="true">×</span></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="${I18nextManager.getInstance().i18n.t('phovea:ui.close')}"></button>
           ${text}
       </div>`).appendTo('body');
       div.on('closed.bs.alert', () => resolve);

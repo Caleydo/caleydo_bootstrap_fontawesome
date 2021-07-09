@@ -96,10 +96,10 @@
     &:not(.fixed) {
 
       &:hover {
-        background: darken($phovea_layout_separator_color, 20%);
+        background: shade-color($phovea_layout_separator_color, 20%);
 
         span {
-          border-color: lighten($phovea_layout_separator_hints, 20%);
+          border-color: tint-color($phovea_layout_separator_hints, 20%);
         }
       }
     }
